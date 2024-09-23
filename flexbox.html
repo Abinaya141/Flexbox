@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layouts-Flexbox</title>
+    <!-- display has flex and grid options-->
+    <!-- flex-direction contains row , column , row-reverse and column-reverse -->
+    <!-- justify-content contains
+     *centre 
+     *space-evenly (even spaces inbetween flexbox and margin ) 
+     *space-between (without space in L R margins )
+     *space-around (L R margin space may differ but flex box space are equal)
+     *flex-start (flexbox in start of the viewport)
+     *flex-end (flexbox in end of the viewport)-->
+    <!-- In column Why flex-end cant change their position in last? 
+     # Bcoz height of the webpage is dynamic
+     # It will change their height depend on content --->
+    <!-- Push elements from Top to Bottom using Justify-content -->
+    <!-- Push elements from Left to Right using align-items -->
+    <style>
+      .container-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+      .box {
+        padding: 30px;
+        border: 1px solid rgb(2, 102, 52);
+      }
+      .container-row > .box:nth-child(odd) {
+        background-color: rgb(18, 192, 192);
+        color: white;
+      }
+      .container-row > .box:nth-child(even) {
+        background-color: rgb(16, 131, 131);
+        color: white;
+      }
+      .container-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .set {
+        padding: 30px;
+        border: 1px solid rgb(73, 3, 46);
+      }
+      .container-col > .set:nth-child(odd) {
+        background-color: rgb(122, 14, 74);
+        color: white;
+      }
+      .container-col > .set:nth-child(even) {
+        background-color: rgb(196, 77, 166);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Flexbox - Uni directional and It arranged in Rows & Column -->
+    <h2>Flexbox : Rows</h2>
+    <div class="container-row">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+    </div>
+    <h2>Flexbox : Columns</h2>
+    <div class="container-col">
+      <div class="set">Set 1</div>
+      <div class="set">Set 2</div>
+      <div class="set">Set 3</div>
+      <div class="set">Set 4</div>
+      <div class="set">Set 5</div>
+    </div>
+  </body>
+</html>
